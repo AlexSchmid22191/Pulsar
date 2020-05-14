@@ -10,6 +10,7 @@ addTopicDefnProvider(Topic_Tree, TOPIC_TREE_FROM_CLASS)
 
 def main():
     ex = wx.App()
+    ex.locale = wx.Locale(wx.LANGUAGE_ENGLISH)
     engine = Pulsarino()
     gui = PulsarGUI(parent=None)
     print('Engine initilized: {:s}'.format(str(engine.__class__)))

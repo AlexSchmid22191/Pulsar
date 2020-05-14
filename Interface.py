@@ -9,6 +9,8 @@ class PulsarGUI(wx.Frame):
     def __init__(self, *args, **kwargs):
         super().__init__(style=wx.DEFAULT_FRAME_STYLE ^ wx.RESIZE_BORDER, *args, **kwargs)
 
+        self.SetBackgroundColour('white')
+
         # Menu Bar
         self.menu_bar = Menubar()
         self.SetMenuBar(self.menu_bar)
@@ -139,8 +141,8 @@ class ControlGrid(wx.Panel):
         super().__init__(*args, **kwargs)
 
         # Grid for entries
-        self.pulse_entry = wx.SpinCtrl(parent=self, value='0', min=0, max=1e6, style=wx.SP_ARROW_KEYS)
-        self.freq_entry = wx.SpinCtrlDouble(parent=self, value='0', min=0, max=15, inc=0.1, style=wx.SP_ARROW_KEYS)
+        self.pulse_entry = wx.SpinCtrl(parent=self, value='0', min=0, max=1e6, style=wx.SP_ARROW_KEYS, size=(70, -1))
+        self.freq_entry = wx.SpinCtrlDouble(parent=self, value='0', min=0, max=15, inc=0.1, style=wx.SP_ARROW_KEYS, size=(70, -1))
 
         pulse_label = wx.StaticText(parent=self, label='Pulses')
         freq_label = wx.StaticText(parent=self, label='Frequency (Hz)')
