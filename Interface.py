@@ -10,6 +10,9 @@ class PulsarGUI(wx.Frame):
         super().__init__(style=wx.DEFAULT_FRAME_STYLE ^ wx.RESIZE_BORDER, *args, **kwargs)
 
         self.SetBackgroundColour('white')
+        icon = wx.Icon('Icons/Laser_Green.png', type=wx.BITMAP_TYPE_PNG)
+        self.SetIcon(icon)
+        self.SetTitle('Pulsar')
 
         # Menu Bar
         self.menu_bar = Menubar()
