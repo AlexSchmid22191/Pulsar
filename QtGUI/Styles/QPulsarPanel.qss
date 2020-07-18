@@ -1,0 +1,2 @@
+QWidget{background-color: #2f2f4d; color: #999cc2; font-family: "Segoe UI", sans-serif;font-size: 48px;}
+QLabel{background-color: #2f2f4d; color: #0097ff; font-family: "Segoe UI", sans-serif;}
